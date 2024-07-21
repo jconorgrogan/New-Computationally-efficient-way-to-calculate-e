@@ -39,4 +39,32 @@ The complementary expressions method leverages two complementary limits that con
    \]
 
 3. **Compare the Two Approximations**:
-   Both approximations should be very close to the true value of \( e \). By analyzing the convergence properties of these two expressions, you can verify the accuracy of the approximation.
+   Both approximations should be very close to the true value of \( e \). But the difference between them is even closer, specifically when  truncating the leading zeros).
+
+
+  # Step-by-Step Calculation for example \( n = 100,000 \)
+
+1. **Calculate \( \left(\frac{100,001}{100,000}\right)^{100,000} \)**:
+   \[
+   2.718268237174489668035064824426046447974446932677822863009164419845151804338017316089139403836951483
+   \]
+   (accurate to 6th decimal place)
+
+3. **Calculate \( \left(\frac{99,999}{100,000}\right)^{100,000} \)**:
+   \[
+   \left(\frac{99,999}{100,000}\right)^{100,000}
+   \]
+   
+   The reciprocal is:
+   \[
+   \frac{1}{\left(\frac{99,999}{100,000}\right)^{100,000}} \approx 2.718295419992776636984018555252864677526093772741773601919706552377623091327243183538793488615641215
+   \]
+    (accurate to 6th decimal place)
+
+5. **Difference between the two approximations**:
+   \[
+   \left(\frac{100,001}{100,000}\right)^{100,000} - \frac{1}{\left(\frac{99,999}{100,000}\right)^{100,000}} = -0.000027182818286968948953730826818229551646840063950738910542132532471286989225867449654084778689732
+   \]
+
+   When you truncate the 0s and add a decimal after the first non-zero term, you get 2.7182818286968948953730826818229551646840063950738910542132532471286989225867449654084778689732
+Which is accurate to the 11th decimal place!
