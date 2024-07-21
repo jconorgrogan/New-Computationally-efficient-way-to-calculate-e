@@ -1,6 +1,8 @@
-# New-Computationally-efficient-way-to-calculate-e
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/5d9a14c8-248b-4a1d-ad1e-fe87661db0ba"># New-Computationally-efficient-way-to-calculate-e
 
-Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. Haven't seen this discussed anywhere. Next steps: I will try to take on http://www.numberworld.org/misc_runs/e-500b.html with my computer to see if this has practical implications
+Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. The interesting thing is that at EXTREMELY large values of n, it differes from the actual value of e by exactly 7e/8... not sure why this is. <img width="694" alt="image" src="https://github.com/user-attachments/assets/5ad01535-0317-43cb-baf3-837ae6fd1da4">
+<img width="693" alt="image" src="https://github.com/user-attachments/assets/c842b379-0a85-4600-96ba-37e5a91bb643">
+
 
 ## Complementary Expressions Method for Approximating \( e \)
 
