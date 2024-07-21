@@ -1,6 +1,6 @@
 # New-Computationally-efficient-way-to-calculate-e
 
-Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. Haven't seen this discussed anywhere. 
+Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. Haven't seen this discussed anywhere. Next steps: I will try to take on http://www.numberworld.org/misc_runs/e-500b.html with my computer to see if this has practical implications
 
 ## Complementary Expressions Method for Approximating \( e \)
 
