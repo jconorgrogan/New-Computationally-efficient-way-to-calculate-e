@@ -4,7 +4,7 @@ Found an interesting way to calculate e which seems incredibly accurate as well 
 
 ## Complementary Expressions Method for Approximating \( e \)
 
-The complementary expressions method leverages two complementary limits that converge to \( e \) and \( \frac{1}{e} \) respectively. This approach uses these limits to achieve a fast and accurate approximation of \( e \).
+The complementary expressions method leverages two complementary limits that converge to \( e \) and \( \frac{1}{e} \) respectively. 
 
 ### Method Overview
 
