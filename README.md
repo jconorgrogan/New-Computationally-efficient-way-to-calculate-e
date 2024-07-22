@@ -76,7 +76,7 @@ As \( n \) approaches infinity, the difference between the approximations \((1 +
 E(n) = \left| (1 + \frac{1}{n})^n - \frac{1}{(1 - \frac{1}{n})^n} - \left( e - \frac{1}{e} \right) \right|
 \]
 
-Empirically, it has been determined that the error term \( E(n) \) can be approximated by:
+I believe that the error term \( E(n) \) can be approximated by:
 
 \[
 E(n) \approx 2.38 \times 10^{-2x - 1}
