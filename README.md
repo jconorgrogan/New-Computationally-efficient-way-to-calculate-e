@@ -69,3 +69,25 @@ The complementary expressions method leverages two complementary limits that con
 
    When you truncate the 0s and add a decimal after the first non-zero term, you get 2.7182818286968948953730826818229551646840063950738910542132532471286989225867449654084778689732
 Which is accurate to the 11th decimal place!
+
+As \( n \) approaches infinity, the difference between the approximations \((1 + \frac{1}{n})^n\) and \(\frac{1}{(1 - \frac{1}{n})^n}\) converges to \( e \). The error term associated with this convergence can be approximated by:
+
+\[
+E(n) = \left| (1 + \frac{1}{n})^n - \frac{1}{(1 - \frac{1}{n})^n} - \left( e - \frac{1}{e} \right) \right|
+\]
+
+Empirically, it has been determined that the error term \( E(n) \) can be approximated by:
+
+\[
+E(n) \approx 2.38 \times 10^{-2x - 1}
+\]
+
+where \( x = \log_{10}(n) \).
+
+Thus, as \( n \) increases by an order of magnitude, the error term decreases by approximately two orders of magnitude. This relationship can also be expressed as:
+
+\[
+E(n) \approx \frac{7e}{8} \cdot 10^{-2x}
+\]
+
+where \( e \) is the base of the natural logarithm and \( x = \log_{10}(n) \).
