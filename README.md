@@ -1,8 +1,3 @@
-
-
-Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. The interesting thing is that at EXTREMELY large values of n, it differes from the actual value of e by the absolute value of  7e/8 to -10^2n.... not sure why this is.
-
-
 ## Complementary Expressions Method for Approximating \( e \)
 
 The complementary expressions method leverages two complementary limits that converge to \( e \) and \( \frac{1}{e} \) respectively. 
@@ -40,10 +35,9 @@ The complementary expressions method leverages two complementary limits that con
    \]
 
 3. **Compare the Two Approximations**:
-   Both approximations should be very close to the true value of \( e \). But the difference between them is even closer, specifically when  truncating the leading zeros).
+   Both approximations should be very close to the true value of \( e \). But the difference between them is even closer, specifically when truncating the leading zeros.
 
-
-  # Step-by-Step Calculation for example \( n = 100,000 \)
+### Step-by-Step Calculation for Example \( n = 100,000 \)
 
 1. **Calculate \( \left(\frac{100,001}{100,000}\right)^{100,000} \)**:
    \[
@@ -51,7 +45,7 @@ The complementary expressions method leverages two complementary limits that con
    \]
    (accurate to 6th decimal place)
 
-3. **Calculate \( \left(\frac{99,999}{100,000}\right)^{100,000} \)**:
+2. **Calculate \( \left(\frac{99,999}{100,000}\right)^{100,000} \)**:
    \[
    \left(\frac{99,999}{100,000}\right)^{100,000}
    \]
@@ -60,15 +54,15 @@ The complementary expressions method leverages two complementary limits that con
    \[
    \frac{1}{\left(\frac{99,999}{100,000}\right)^{100,000}} \approx 2.718295419992776636984018555252864677526093772741773601919706552377623091327243183538793488615641215
    \]
-    (accurate to 6th decimal place)
+   (accurate to 6th decimal place)
 
-5. **Difference between the two approximations**:
+3. **Difference between the Two Approximations**:
    \[
    \left(\frac{100,001}{100,000}\right)^{100,000} - \frac{1}{\left(\frac{99,999}{100,000}\right)^{100,000}} = -0.000027182818286968948953730826818229551646840063950738910542132532471286989225867449654084778689732
    \]
 
    When you truncate the 0s and add a decimal after the first non-zero term, you get 2.7182818286968948953730826818229551646840063950738910542132532471286989225867449654084778689732
-Which is accurate to the 11th decimal place!
+   Which is accurate to the 11th decimal place!
 
 As \( n \) approaches infinity, the difference between the approximations \((1 + \frac{1}{n})^n\) and \(\frac{1}{(1 - \frac{1}{n})^n}\) converges to \( e \). The error term associated with this convergence can be approximated by:
 
@@ -90,4 +84,4 @@ Thus, as \( n \) increases by an order of magnitude, the error term decreases by
 E(n) \approx \frac{7e}{8} \cdot 10^{-2x}
 \]
 
-where \( e \) is the base of the natural logarithm and \( x = \log_{10}(n) \).
+
