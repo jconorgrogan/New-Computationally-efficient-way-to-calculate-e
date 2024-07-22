@@ -1,6 +1,6 @@
 
 
-Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. The interesting thing is that at EXTREMELY large values of n, it differes from the actual value of e by the absolute value of exactly 4e/3 to -10^high value n... not sure why this is.
+Found an interesting way to calculate e which seems incredibly accurate as well as extremely computationally efficient. The interesting thing is that at EXTREMELY large values of n, it differes from the actual value of e by the absolute value of  7e/8 to -10^2n.... not sure why this is.
 
 
 ## Complementary Expressions Method for Approximating \( e \)
