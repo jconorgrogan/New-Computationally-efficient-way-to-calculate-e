@@ -27,7 +27,7 @@ def calculate_approximations(x):
     
     return original_result, new_result
 
-def calculate_refined_difference(x):
+def calculate_scaled_refined_difference(x):
     original_result, new_result = calculate_approximations(x)
     
     # Calculate the difference
@@ -36,7 +36,10 @@ def calculate_refined_difference(x):
     # Multiply by 24 and divide by 23
     refined_difference = (difference * Decimal('24')) / Decimal('23')
     
-    return original_result, new_result, difference, refined_difference
+    # Multiply by 10^(2x)
+    scaled_refined_difference = refined_difference * (Decimal('10') ** (2 * x))
+    
+    return original_result, new_result, difference, refined_difference, scaled_refined_difference
 
 def format_estimation(value):
     value_str = f"{value:.{PRECISION}f}"
@@ -55,7 +58,7 @@ def count_accurate_decimals(approximation, true_value):
     return max(0, count - 2)  # Subtract 2 to exclude "2." and ensure non-negative result
 
 if __name__ == '__main__':
-    print("Starting e Approximation with Refined Difference Calculation")
+    print("Starting e Approximation with Scaled Refined Difference Calculation")
     
     # Calculate true e value using mpmath
     true_e = mpf(mp.e)
@@ -66,14 +69,14 @@ if __name__ == '__main__':
     results = []
     for x in X_VALUES:
         start_time = time.time()
-        original, new, diff, refined_diff = calculate_refined_difference(x)
+        original, new, diff, refined_diff, scaled_refined_diff = calculate_scaled_refined_difference(x)
         end_time = time.time()
-        results.append((x, original, new, diff, refined_diff, end_time - start_time))
+        results.append((x, original, new, diff, refined_diff, scaled_refined_diff, end_time - start_time))
 
     overall_end_time = time.time()
     print(f"All calculations completed in {overall_end_time - overall_start_time:.2f} seconds")
 
-    for x, original, new, diff, refined_diff, calc_time in results:
+    for x, original, new, diff, refined_diff, scaled_refined_diff, calc_time in results:
         print(f"\nResults for x = {x} (n = 10^{x}):")
         
         print("Original Method:")
@@ -93,6 +96,9 @@ if __name__ == '__main__':
         
         print("\nRefined Difference ((New - Original) * 24/23):")
         print(f"  {format_estimation(refined_diff)}")
+        
+        print(f"\nScaled Refined Difference (Refined Difference * 10^(2x)):")
+        print(f"  {format_estimation(scaled_refined_diff)}")
         
         print(f"\nCalculation time: {calc_time:.2f} seconds")
 
