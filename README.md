@@ -5,14 +5,12 @@ The complementary expressions method leverages two complementary limits that con
 ### Method Overview
 
 1. **Expression for e**:
-   (n+1/n)^n
-   This expression approaches e as n increases. It is based on the limit definition of e from calculus:
-   e = lim[n→∞] (1 + 1/n)^n
+   ((n+1)/n)^n 
    By manipulating the expression slightly, it becomes:
    (n+1/n)^n = (1 + 1/n)^n
 
 2. **Expression for 1/e**:
-   (n-1/n)^n
+   ((n-1)/n)^n 
    This expression converges to 1/e as n increases. The reciprocal of this value provides another approximation of e.
 
 ### Calculation Steps
