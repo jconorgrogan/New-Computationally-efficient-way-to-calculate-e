@@ -1,4 +1,4 @@
-## Complementary Expressions Method for Approximating e
+## Complementary Expressions Method for Approximating e #1
 
 The complementary expressions method leverages two complementary limits that converge to e and 1/e respectively.
 
@@ -48,3 +48,22 @@ I believe that the error term E(n) can be approximated by:
 E(n) ≈ 2.38 × 10^(-2x - 1)
 where x = log_10(n). Thus, as n increases by an order of magnitude, the error term decreases by approximately two orders of magnitude. This relationship can also be expressed as:
 E(n) ≈ (7e/8) · 10^(-2x)
+
+**Simple negative side- #2**
+Instead of using the classic limit:
+
+\[
+\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n,
+\]
+
+you can let \( x \approx -1 \) (very close to \(-1\)) and rewrite the same limit:
+
+1. Start with \( x = -0.\text{(many 9s)} \).
+2. Notice that
+   \[
+   \left(1 + \frac{1}{n}\right)^n \quad\longleftrightarrow\quad (1 + x)^{1/x}.
+   \]
+3. Perform stable rearrangements, like:
+   \[
+   \frac{1}{(1 + x)^{1/x}} \quad\text{and}\quad \left(1 + \frac{1}{(1 + x)^{1/x}}\right)^{(1 + x)^{1/x}}.
+   \]
