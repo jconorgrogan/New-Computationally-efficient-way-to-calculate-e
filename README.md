@@ -67,3 +67,4 @@ you can let \( x \approx -1 \) (very close to \(-1\)) and rewrite the same limit
    \[
    \frac{1}{(1 + x)^{1/x}} \quad\text{and}\quad \left(1 + \frac{1}{(1 + x)^{1/x}}\right)^{(1 + x)^{1/x}}.
    \]
+**Interestingly, this calculation is precise to the exact digit based on the number of 9s you include**
