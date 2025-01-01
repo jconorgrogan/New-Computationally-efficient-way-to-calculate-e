@@ -1,4 +1,5 @@
 ## Complementary Expressions Method for Approximating e #1
+Found two interesting ways to compute e that i havent seen in literature before
 
 The complementary expressions method leverages two complementary limits that converge to e and 1/e respectively.
 
@@ -68,3 +69,15 @@ you can let \( x \approx -1 \) (very close to \(-1\)) and rewrite the same limit
    \frac{1}{(1 + x)^{1/x}} \quad\text{and}\quad \left(1 + \frac{1}{(1 + x)^{1/x}}\right)^{(1 + x)^{1/x}}.
    \]
 **Interestingly, this calculation is precise to the exact digit based on the number of 9s you include**
+
+further, there is some quite odd other behavior.
+
+Consider the expression:
+$f(x) = \left(1 + \frac{1}{(1+x)^{1/x}}\right)^{(1+x)^{1/x}}$
+When $x$ approaches 0 from the negative side, this expression converges to $e$. We investigated this convergence by using inputs of the form $x = -0.\underbrace{99...9}{n\text{ times}}$ for increasing values of $n$.
+An interesting pattern emerged: when using $n$ nines, we typically get $n-1$ correct decimal digits of $e$. For example:
+With 3 nines ($x = -0.999$), we get 2 correct digits
+With 4 nines ($x = -0.9999$), we get 3 correct digits
+And so on...
+However, we discovered something remarkable: when $n = 51$, we get 51 correct digits instead of the expected 50. This appears to be unique - we tested up to $n = 1900$ and found no other values that exceed their expected precision.
+The question is: What makes $n = 51$ special in this context? Why does this particular input achieve one extra digit of precision in approximating $e$?
